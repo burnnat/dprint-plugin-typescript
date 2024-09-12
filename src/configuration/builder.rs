@@ -369,6 +369,22 @@ impl ConfigurationBuilder {
     self.insert("jsxExpressionContainer.spaceSurroundingExpression", value.into())
   }
 
+  /// Whether to add a space surrounding the expression of a JSX attribute.
+  ///
+  /// * `true` - Ex. `<Test attr={ myValue } />`
+  /// * `false` (default) - Ex. `<Test attr={myValue} />`
+  pub fn jsx_attributes_space_surrounding_expression(&mut self, value: bool) -> &mut Self {
+    self.insert("jsxAttributes.spaceSurroundingExpression", value.into())
+  }
+
+  /// Whether to add a space surrounding the expression of a JSX child.
+  ///
+  /// * `true` - Ex. `<Test>{ myValue }</Test>`
+  /// * `false` (default) - Ex. `<Test>{myValue}</Test>`
+  pub fn jsx_child_space_surrounding_expression(&mut self, value: bool) -> &mut Self {
+    self.insert("jsxChild.spaceSurroundingExpression", value.into())
+  }
+
   /// Whether to add a space before the slash in a self closing tag for a JSX element.
   ///
   /// * `true` (default) - Ex. `<Test />`

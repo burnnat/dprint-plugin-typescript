@@ -2,9 +2,15 @@
 ~~ jsx.multiLineParens: never ~~
 == should format ==
 const t = <test other={   4  } />;
+const u = <test {  ...props   } />;
+const x = <test>{  other }</test>;
+const y = <test>{ ...children   }</test>;
 
 [expect]
 const t = <test other={4} />;
+const u = <test {...props} />;
+const x = <test>{other}</test>;
+const y = <test>{...children}</test>;
 
 == should keep comments within the expression ==
 const t1 = <div>

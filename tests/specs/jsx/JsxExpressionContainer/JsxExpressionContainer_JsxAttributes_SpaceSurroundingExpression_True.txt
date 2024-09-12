@@ -1,13 +1,13 @@
 -- file.tsx --
-~~ jsxExpressionContainer.spaceSurroundingExpression: true ~~
-== should format ==
+~~ jsxExpressionContainer.spaceSurroundingExpression: true, jsxAttributes.spaceSurroundingExpression: false ~~
+== should allow overriding jsx attributes ==
 const t = <test other={   4  } />;
 const u = <test {  ...props   } />;
 const x = <test>{  other }</test>;
 const y = <test>{ ...children   }</test>;
 
 [expect]
-const t = <test other={ 4 } />;
-const u = <test { ...props } />;
+const t = <test other={4} />;
+const u = <test {...props} />;
 const x = <test>{ other }</test>;
 const y = <test>{ ...children }</test>;

@@ -280,6 +280,8 @@ pub fn resolve_config(config: ConfigKeyMap, global_config: &GlobalConfiguration)
     if_statement_space_after_if_keyword: get_value(&mut config, "ifStatement.spaceAfterIfKeyword", true, &mut diagnostics),
     import_declaration_space_surrounding_named_imports: get_value(&mut config, "importDeclaration.spaceSurroundingNamedImports", true, &mut diagnostics),
     jsx_expression_container_space_surrounding_expression: get_value(&mut config, "jsxExpressionContainer.spaceSurroundingExpression", false, &mut diagnostics),
+    jsx_attributes_space_surrounding_expression: get_value(&mut config, "jsxAttributes.spaceSurroundingExpression", false, &mut diagnostics),
+    jsx_child_space_surrounding_expression: get_value(&mut config, "jsxChild.spaceSurroundingExpression", false, &mut diagnostics),
     jsx_self_closing_element_space_before_slash: get_value(&mut config, "jsxSelfClosingElement.spaceBeforeSlash", true, &mut diagnostics),
     method_space_before_parentheses: get_value(&mut config, "method.spaceBeforeParentheses", false, &mut diagnostics),
     object_expression_space_surrounding_properties: get_value(

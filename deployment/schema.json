@@ -690,6 +690,30 @@
         "description": "Ex. `{myValue}`"
       }]
     },
+    "jsxAttributes.spaceSurroundingExpression": {
+      "description": "Whether to add a space surrounding the expression of a JSX attribute.",
+      "type": "boolean",
+      "default": false,
+      "oneOf": [{
+        "const": true,
+        "description": "Ex. `<Test attr={ myValue } />`"
+      }, {
+        "const": false,
+        "description": "Ex. `<Test attr={myValue} />`"
+      }]
+    },
+    "jsxChild.spaceSurroundingExpression": {
+      "description": "Whether to add a space surrounding the expression of a JSX child.",
+      "type": "boolean",
+      "default": false,
+      "oneOf": [{
+        "const": true,
+        "description": "Ex. `<Test>{ myValue }</Test>`"
+      }, {
+        "const": false,
+        "description": "Ex. `<Test>{myValue}</Test>`"
+      }]
+    },
     "method.spaceBeforeParentheses": {
       "description": "Whether to add a space before the parentheses of a method.",
       "type": "boolean",
@@ -972,6 +996,12 @@
     },
     "jsxExpressionContainer.spaceSurroundingExpression": {
       "$ref": "#/definitions/jsxExpressionContainer.spaceSurroundingExpression"
+    },
+    "jsxAttributes.spaceSurroundingExpression": {
+      "$ref": "#/definitions/jsxAttributes.spaceSurroundingExpression"
+    },
+    "jsxChild.spaceSurroundingExpression": {
+      "$ref": "#/definitions/jsxChild.spaceSurroundingExpression"
     },
     "method.spaceBeforeParentheses": {
       "$ref": "#/definitions/method.spaceBeforeParentheses"
